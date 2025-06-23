@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Quiz App</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+   
+  <header>
+    <img src="logo.png" alt="my logo" class="logo" />
+    <h1>🎓 QuizMaster</h1>
+  </header>
+
+  <main class="quiz-container">
+   <h3>Test your knowledge by category!</h3>
+    <!-- Category Section -->
+    <section class="category-section" id="category-section">
+      <label for="category">Choose a Category:</label>
+      <select id="category">
+        <option value="" disabled selected>Select category</option>
+        <option value="html">HTML</option>
+        <option value="css">CSS</option>
+        <option value="javascript">JavaScript</option>
+      </select>
+      <button id="start-btn">Start Quiz</button>
+    </section>
+
+    <!-- Question Section (Initially Hidden) -->
+    <section class="question-section hidden" id="question-section">
+      <div class="progress-bar-container">
+  <div class="progress-bar" id="progress-bar"></div>
+</div>
+      <div class="question-box">
+        <h2 id="question-text">Question goes here</h2>
+        <div class="options" id="options-container">
+          <!-- Options will be dynamically injected here -->
+        </div>
+      </div>
+      <div class="navigation">
+        <button id="next-btn">Next</button>
+      </div>
+    </section>
+
+    <!-- Result Section (Initially Hidden) -->
+    <section class="result-section hidden" id="result-section">
+      <h2>🎉 Quiz Completed!</h2>
+      <p>Your score: <span id="final-score">0</span> / <span id="total-questions">0</span></p>
+      <button id="restart-btn">Try Again</button>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>Made with 💜 by Daniel Udeh • Quiz App Project</p>
+    <p>Follow me on <a href="https://github.com/diddy0077" target="_blank">GitHub</a></p>
+    <p><a href="https://www.linkedin.com/in/daniel-udeh-a03971350/" target="_blank" rel="noopener noreferrer">LinkedIn</a></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
